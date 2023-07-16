@@ -17,9 +17,9 @@ const IndexPage = () => {
   return (
     <Layout>
       <Banner />
-      {/* <Partner />
+       <Partner />
       <Balance />
-      <FromStarted />
+     {/* <FromStarted />
       <Card />
       <Testimonials />
       <ShortText />

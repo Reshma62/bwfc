@@ -7,20 +7,26 @@ const Balance = () => {
     <Box
       sx={{
         backgroundImage: `url(${bgwaveImage})`,
-        maxWidth: "1340px",
+        width: "1340px",
+        maxWidth: "100%",
         margin: "0 auto",
       }}
     >
-      <Stack direction={"row"} spacing={8}>
+      <Stack
+        direction={{ md: "row", xs: "column-reverse" }}
+        spacing={8}
+        alignItems={"center"}
+        sx={{}}
+      >
         <Box
           sx={{
-            flexBasis: "48%",
+            flexBasis: { md: "48%", xs: "100%" },
             filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))",
           }}
         >
           <StaticImage src="../images/Illustration.png" />
         </Box>
-        <Stack sx={{ flexBasis: "50%", mt: "50px !important" }}>
+        <Stack sx={{ flexBasis: "50%" }}>
           <Typography
             variant="h5"
             sx={{
@@ -37,10 +43,10 @@ const Balance = () => {
           <Typography
             variant="h2"
             sx={{
-              fontSize: "50px",
+              fontSize: { lg: "50px", md: "35px", xs: "30px" },
               letterSpacing: "-3%",
               fontWeight: 700,
-              lineHeight: "56px",
+              lineHeight: { lg: "56px", md: "35px", xs: "30px" },
               maxWidth: "580px",
               fontFamily: "Manrope",
             }}

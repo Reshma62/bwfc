@@ -9,11 +9,12 @@ const Partner = () => {
         Over 32k+ software businesses growing with AR Shakir
       </Typography>
       <Stack
-        direction={"row"}
+        direction={ "row" }
+        flexWrap={"wrap"}
         spacing={5}
         alignItems={"center"}
         justifyContent={"center"}
-        sx={{ mt: "36px" }}
+        sx={{ mt: "36px" ,rowGap:"30px"}}
       >
         <StaticImage src="../images/openZeplin.png.png" />
         <StaticImage src="../images/oracel.png" />
