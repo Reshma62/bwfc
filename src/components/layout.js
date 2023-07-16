@@ -8,9 +8,9 @@ const Layout = ({ children }) => {
     <>
       <Navbar />
       <Container
-        disableGutters
+
         maxWidth={false}
-        sx={{ width: "1600px", mx: "auto", fontFamily: "Manrope" }}
+        sx={{ width: "1600px", maxWidth:"98%", mx: "auto", fontFamily: "Manrope" }}
       >
         <main>{children}</main>
         <Footer />

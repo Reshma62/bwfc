@@ -17,14 +17,14 @@ const IndexPage = () => {
   return (
     <Layout>
       <Banner />
-      <Partner />
+      {/* <Partner />
       <Balance />
       <FromStarted />
       <Card />
       <Testimonials />
       <ShortText />
       <Account />
-      <Chooseme />
+      <Chooseme /> */}
     </Layout>
   );
 };
