@@ -10,20 +10,29 @@ import {
 } from "@mui/material";
 import { StaticImage } from "gatsby-plugin-image";
 import { Link as NavLink } from "gatsby";
+
 const Footer = () => {
-  const StyledListItem = styled(ListItem)({
+  const StyledListItem = styled(ListItem)(({ theme }) => ({
     fontFamily: "Manrope",
     fontSize: 16,
     textDecoration: "none",
     paddingLeft: 0,
-  });
-  const StyledLink = styled(Link)({
+    [theme.breakpoints.down("sm")]: {
+      fontSize: 14,
+    },
+  }));
+
+  const StyledLink = styled(Link)(({ theme }) => ({
     textDecoration: "none",
     display: "flex",
     alignItems: "center",
     color: "#fff",
     textTransform: "capitalize",
-  });
+    [theme.breakpoints.down("sm")]: {
+      fontSize: 14,
+    },
+  }));
+
   let companyItem = ["About Us", "Careers", "Blog", "Pricing"];
   let productItem = [
     "Invoicing Platform",
@@ -31,34 +40,35 @@ const Footer = () => {
     "Create Proposal",
     "Contracts",
   ];
-  let reseroceItem = [
+  let resourceItem = [
     "Proposal Template",
     "Invoice Template",
-    "Tuturoial",
-    "How to write a contract",
+    "Tutorial",
+    "How to Write a Contract",
   ];
+
   return (
     <footer
       style={{
         background: "#1B1C31",
-
-
         color: "#fff",
       }}
     >
       <Stack
-        direction={"row"}
-        justifyContent={"space-between"}
-        sx={{ p: "110px 120px" }}
+        direction={{ xs: "column", sm: "row" }}
+        justifyContent="space-between"
+        sx={{ p: { xs: "20px", sm: "40px 20px" } }}
       >
-        <Box sx={{ flexBasis: "50%" }}>
-          <StaticImage src="../images/whitelogo.png" />
+        <Box sx={{ flexBasis: { xs: "100%", sm: "50%" } }}>
+          <StaticImage src="../images/whitelogo.png" alt="Logo" />
           <Typography
             sx={{
               color: "rgba(255, 255, 255, .4)",
               fontFamily: "Manrope",
               maxWidth: "520px",
               mt: "20px",
+              fontSize: { xs: 12, sm: 16 },
+              lineHeight: { xs: 1.6, sm: 1.8 },
             }}
           >
             Yet bed any for travelling assistance indulgence unpleasing. Not
@@ -66,12 +76,16 @@ const Footer = () => {
             alteration boisterous the attachment.
           </Typography>
         </Box>
-        <Stack direction={"row"} gap={5}>
+        <Stack
+          direction={{ xs: "column", sm: "row" }}
+          gap={5}
+          sx={{ mt: { xs: 4, sm: 0 } }}
+        >
           <Box>
             <Typography variant="h5">Company</Typography>
             <List>
               {companyItem.map((item) => (
-                <StyledListItem>
+                <StyledListItem key={item}>
                   <StyledLink component={NavLink} to="/">
                     {item}
                   </StyledLink>
@@ -83,7 +97,7 @@ const Footer = () => {
             <Typography variant="h5">Product</Typography>
             <List>
               {productItem.map((item) => (
-                <StyledListItem>
+                <StyledListItem key={item}>
                   <StyledLink component={NavLink} to="/">
                     {item}
                   </StyledLink>
@@ -94,8 +108,8 @@ const Footer = () => {
           <Box>
             <Typography variant="h5">Resources</Typography>
             <List>
-              {reseroceItem.map((item) => (
-                <StyledListItem>
+              {resourceItem.map((item) => (
+                <StyledListItem key={item}>
                   <StyledLink component={NavLink} to="/">
                     {item}
                   </StyledLink>
@@ -106,15 +120,32 @@ const Footer = () => {
         </Stack>
       </Stack>
       <Stack
-        direction={"row"}
-        justifyContent={"space-between"}
-        sx={{ p: "20px 110px",borderTop:"1px solid #fff" }}
+        direction={{ xs: "column", sm: "row" }}
+        justifyContent="space-between"
+        alignItems="center"
+        sx={{
+          p: { xs: "10px 20px", sm: "20px 110px" },
+          borderTop: "1px solid #fff",
+        }}
       >
-        <Typography>
+        <Typography
+          sx={{
+            fontSize: { xs: 10, sm: 12 },
+            textAlign: { xs: "center", sm: "left" },
+            mb: { xs: 2, sm: 0 },
+          }}
+        >
           2022 AR Shakir. All rights reserved. -- Privacy Policy - Terms of
           Services
         </Typography>
-        <Typography>Supported by Microsoft Startup</Typography>
+        <Typography
+          sx={{
+            fontSize: { xs: 10, sm: 12 },
+            textAlign: { xs: "center", sm: "right" },
+          }}
+        >
+          Supported by Microsoft Startup
+        </Typography>
       </Stack>
     </footer>
   );

@@ -19,12 +19,12 @@ const IndexPage = () => {
       <Banner />
        <Partner />
       <Balance />
-     {/* <FromStarted />
-      <Card />
-      <Testimonials />
+      <FromStarted />
+     <Card />
+       <Testimonials />
       <ShortText />
       <Account />
-      <Chooseme /> */}
+      <Chooseme /> 
     </Layout>
   );
 };

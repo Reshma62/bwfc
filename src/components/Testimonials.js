@@ -25,7 +25,7 @@ const Testimonials = () => {
       <Typography
         variant="h3"
         sx={{
-          fontSize: "40px",
+          fontSize: { xs: "32px", sm: "40px" },
           fontWeight: 800,
           letterSpacing: "-2px",
           lineHeight: "48px",
@@ -39,18 +39,28 @@ const Testimonials = () => {
 
       <Swiper rewind={true} navigation={true} modules={[Navigation]}>
         {arr.map((item) => (
-          <SwiperSlide>
-            <Stack direction={"row"} spacing={8}>
-              <Box flexBasis={"50%"}>
+          <SwiperSlide key={item}>
+            <Stack
+              direction={{ xs: "column", md: "row" }}
+              spacing={8}
+              alignItems={{ xs: "center", md: "flex-start" }}
+            >
+              <Box
+                flexBasis={{ xs: "100%", md: "50%" }}
+                sx={{ textAlign: { xs: "center", md: "initial" } }}
+              >
                 <StaticImage src="../images/client.png" />
               </Box>
-              <Box flexBasis={"50%"}>
+              <Box
+                flexBasis={{ xs: "100%", md: "50%" }}
+                sx={{ textAlign: { xs: "center", md: "initial" } }}
+              >
                 <StaticImage src="../images/coma.png" />
                 <Typography
                   variant="h4"
                   sx={{
                     fontFamily: "Manrope",
-                    fontSize: "20px",
+                    fontSize: { xs: "18px", sm: "20px" },
                     fontWeight: 800,
                     maxWidth: "300px",
                     my: "16px",
@@ -61,7 +71,7 @@ const Testimonials = () => {
                 <Typography
                   sx={{
                     fontFamily: "Manrope",
-                    fontSize: "16px",
+                    fontSize: { xs: "14px", sm: "16px" },
                     fontWeight: 400,
                     maxWidth: "450px",
                     mb: "16px",
@@ -76,7 +86,7 @@ const Testimonials = () => {
                 <Typography
                   sx={{
                     fontFamily: "Manrope",
-                    fontSize: "16px",
+                    fontSize: { xs: "14px", sm: "16px" },
                     fontWeight: 400,
                     maxWidth: "450px",
                     mb: "16px",
@@ -95,42 +105,27 @@ const Testimonials = () => {
                     <Star style={{ opacity: 0.55 }} fontSize="inherit" />
                   }
                 />
-                <Typography>Angela Taylor</Typography>
-                <Typography>CEO SAMSUNG</Typography>
+                <Typography
+                  sx={{
+                    fontSize: { xs: "14px", sm: "16px" },
+                    fontWeight: 500,
+                  }}
+                >
+                  Angela Taylor
+                </Typography>
+                <Typography
+                  sx={{
+                    fontSize: { xs: "14px", sm: "16px" },
+                    fontWeight: 500,
+                  }}
+                >
+                  CEO SAMSUNG
+                </Typography>
               </Box>
             </Stack>
           </SwiperSlide>
         ))}
       </Swiper>
-      {/* <Stack direction={"row"} spacing={8}>
-        <Box flexBasis={"50%"}>
-          <StaticImage src="../images/client.png" />
-        </Box>
-        <Box flexBasis={"50%"}>
-          <Typography variant="h4">
-            Save Time Managing Social Media For Your Business
-          </Typography>
-          <Typography variant="p">
-            Is be upon sang fond must shew. Really boy law county she unable her
-            sister. Feet you off its like like six. Among sex are leave law
-            built now. In built table in an rapid blush. Merits behind on afraid
-            or warmly.
-          </Typography>
-          <Typography variant="p">
-            Believing neglected so so allowance existence departure in. In
-            design active temper be uneasy.
-          </Typography>
-          <Rating
-            name="text-feedback"
-            value={5}
-            readOnly
-            precision={0.5}
-            emptyIcon={<Star style={{ opacity: 0.55 }} fontSize="inherit" />}
-          />
-          <Typography variant="p">Angela Taylor</Typography>
-          <Typography variant="p">CEO SAMSUNG</Typography>
-        </Box>
-      </Stack> */}
     </Box>
   );
 };

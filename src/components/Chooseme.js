@@ -1,6 +1,4 @@
 import React from "react";
-
-import { Image } from "@mui/icons-material";
 import {
   Avatar,
   Box,
@@ -19,17 +17,17 @@ const Chooseme = () => {
       sx={{
         background: "#F3F7FA",
         borderRadius: "20px",
-        py: "50px",
+        py: { xs: "30px", md: "50px" },
         maxWidth: "1340px",
         margin: "0 auto",
         mb: "73px",
       }}
     >
-      <Box sx={{ textAlign: "center", mb: "70px" }}>
+      <Box sx={{ textAlign: "center", mb: { xs: "40px", md: "70px" } }}>
         <Typography
           variant="h6"
           sx={{
-            fontSize: "18px",
+            fontSize: { xs: "18px", sm: "20px", md: "24px" },
             fontFamily: "Manrope",
             fontWeight: 800,
             color: "#3734A9",
@@ -40,7 +38,7 @@ const Chooseme = () => {
         <Typography
           variant="h2"
           sx={{
-            fontSize: "50px",
+            fontSize: { xs: "32px", sm: "40px", md: "50px" },
             fontFamily: "Manrope",
             fontWeight: 700,
           }}
@@ -49,22 +47,25 @@ const Chooseme = () => {
         </Typography>
       </Box>
       <Stack
-        // justifyContent={"space-between"}
-        direction={"row"}
-        flexWrap={"wrap"}
+        direction={{ xs: "column", md: "row" }}
+        flexWrap={{ xs: "nowrap", md: "wrap" }}
         gap={5}
-        sx={{ px: "81px" }}
+        px={{ xs: "20px", md: "81px" }}
       >
         {arr.map((item) => (
-          <Box sx={{ flexBasis: "47%" }}>
+          <Box sx={{ flexBasis: { xs: "100%", md: "47%" } }} key={item}>
             <List
               sx={{
                 background: "#fff",
-                p: "30px 15px",
+                p: { xs: "20px 15px", md: "30px 15px" },
                 borderRadius: "20px",
               }}
             >
-              <ListItem alignItems="flex-start" sx={{ gap: "20px" }}>
+              <ListItem
+
+                alignItems={{ xs: "center", md: "flex-start" }}
+                sx={{ gap: { xs: "20px", md: "20px" }, flexDirection:{xs: "column", md:"row"} }}
+              >
                 <ListItemAvatar>
                   <Avatar></Avatar>
                 </ListItemAvatar>
@@ -73,7 +74,7 @@ const Chooseme = () => {
                     <Typography
                       variant="h6"
                       sx={{
-                        fontSize: "24px",
+                        fontSize: { xs: "20px", sm: "24px" },
                         fontFamily: "Manrope",
                         fontWeight: 800,
                       }}
@@ -85,10 +86,11 @@ const Chooseme = () => {
                     <Typography
                       variant="body1"
                       sx={{
-                        fontSize: "18px",
+                        fontSize: { xs: "16px", sm: "18px" },
                         color: "#757095",
                         fontFamily: "Manrope",
-                        maxWidth: "320px",
+                        lineHeight: "1.6",
+                        maxWidth: { xs: "100%", sm: "320px" },
                       }}
                     >
                       End-to-end payments and financial management in a single

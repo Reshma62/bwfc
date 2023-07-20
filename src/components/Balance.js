@@ -43,10 +43,10 @@ const Balance = () => {
           <Typography
             variant="h2"
             sx={{
-              fontSize: { lg: "50px", md: "35px", xs: "30px" },
+              fontSize: { lg: "50px", md: "35px", xs: "29px" },
               letterSpacing: "-3%",
               fontWeight: 700,
-              lineHeight: { lg: "56px", md: "35px", xs: "30px" },
+              lineHeight: { lg: "56px", md: "35px", xs: "32px" },
               maxWidth: "580px",
               fontFamily: "Manrope",
             }}
@@ -56,11 +56,11 @@ const Balance = () => {
           <Typography
             variant="p"
             sx={{
-              fontSize: "18px",
+              fontSize: { xs: "16px", md: "18px" },
               letterSpacing: "-2%",
               color: "#757095",
               maxWidth: "510px",
-              my: "30px",
+              my: { xs: "20px", md: "30px" },
               fontFamily: "Manrope",
             }}
           >

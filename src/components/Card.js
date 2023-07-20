@@ -2,6 +2,7 @@ import React from "react";
 import { Box, Button, Stack, Typography } from "@mui/material";
 import { StaticImage } from "gatsby-plugin-image";
 import bgwaveImage from "../images/bgwave.png";
+
 const Card = () => {
   return (
     <Box
@@ -11,8 +12,12 @@ const Card = () => {
         margin: "0 auto",
       }}
     >
-      <Stack direction={"row"} spacing={8} alignItems={"center"}>
-        <Stack sx={{ flexBasis: "50%" }}>
+      <Stack
+        direction={{ xs: "column", md: "row" }}
+        spacing={2}
+        alignItems="center"
+      >
+        <Box sx={{ padding: "20px" }}>
           <Typography
             variant="h5"
             sx={{
@@ -69,11 +74,11 @@ const Card = () => {
               Get Started
             </Button>
           </Box>
-        </Stack>
+        </Box>
         <Box
           sx={{
-            flexBasis: "48%",
             filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))",
+            maxWidth: "100%",
           }}
         >
           <StaticImage src="../images/Cards.png" />

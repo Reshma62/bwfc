@@ -1,7 +1,5 @@
 import React from "react";
-import { Box, Button, Stack, TextField, Typography } from "@mui/material";
-import { StaticImage } from "gatsby-plugin-image";
-import bgwaveImage from "../images/bgwave.png";
+import { Box, Button, Grid, TextField, Typography } from "@mui/material";
 
 const FromStarted = () => {
   return (
@@ -11,17 +9,12 @@ const FromStarted = () => {
         margin: "0 auto",
         background: "#F3F7FA",
         borderRadius: "20px",
-
         mb: "73px",
+        padding: "20px", // Adjust this value to control the overall padding
       }}
     >
-      <Stack
-        direction={"row"}
-        spacing={8}
-        alignItems={"center"}
-        sx={{ p: "75px 68px" }}
-      >
-        <Stack sx={{ flexBasis: "50%", mt: "50px !important" }}>
+      <Grid container spacing={2}>
+        <Grid item xs={12} md={6}>
           <Typography
             variant="h5"
             sx={{
@@ -61,14 +54,10 @@ const FromStarted = () => {
           >
             Why kept very ever home mrs. Considered sympathize ten uncommonly
             occasional assistance sufficient not. Letter of on become he tended
-            active enable to.{" "}
+            active enable to.
           </Typography>
-        </Stack>
-        <Box
-          sx={{
-            flexBasis: "50%",
-          }}
-        >
+        </Grid>
+        <Grid item xs={12} md={6}>
           <Box maxWidth={"556px"}>
             <Typography
               variant="h5"
@@ -116,8 +105,8 @@ const FromStarted = () => {
               </Button>
             </Box>
           </Box>
-        </Box>
-      </Stack>
+        </Grid>
+      </Grid>
     </Box>
   );
 };

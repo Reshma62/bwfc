@@ -2,6 +2,7 @@ import React from "react";
 import { Box, Button, Stack, Typography } from "@mui/material";
 import { StaticImage } from "gatsby-plugin-image";
 import bgwaveImage from "../images/bgwave.png";
+
 const Account = () => {
   return (
     <Box
@@ -11,13 +12,18 @@ const Account = () => {
         margin: "0 auto",
       }}
     >
-      <Stack direction={"row"} spacing={8}>
-        <Stack sx={{ flexBasis: "50%", mt: "50px !important" }}>
+      <Stack
+        direction={{ xs: "column", md: "row" }}
+        spacing={8}
+        alignItems={{ xs: "center", md: "flex-start" }}
+        mt={{ xs: "30px", md: "50px" }}
+      >
+        <Stack flexBasis={{ xs: "100%", md: "50%" }}>
           <Typography
             variant="h5"
             sx={{
               color: "#3734A9",
-              fontSize: "18px",
+              fontSize: { xs: "14px", sm: "16px", md: "18px" },
               textTransform: "uppercase",
               fontWeight: 800,
               mb: "25px",
@@ -29,7 +35,7 @@ const Account = () => {
           <Typography
             variant="h2"
             sx={{
-              fontSize: "50px",
+              fontSize: { xs: "32px", sm: "40px", md: "50px" },
               letterSpacing: "-2px",
               fontWeight: 700,
               lineHeight: "56px",
@@ -42,7 +48,7 @@ const Account = () => {
           <Typography
             variant="p"
             sx={{
-              fontSize: "18px",
+              fontSize: { xs: "14px", sm: "16px", md: "18px" },
               letterSpacing: "-2%",
               color: "#757095",
               maxWidth: "510px",
@@ -59,7 +65,7 @@ const Account = () => {
               variant="contained"
               sx={{
                 bgcolor: "#3734A9",
-                p: "15px 39px",
+                p: { xs: "12px 32px", sm: "15px 39px" },
                 textTransform: "capitalize",
                 mr: 7,
                 display: "inline-block",
@@ -71,8 +77,8 @@ const Account = () => {
           </Box>
         </Stack>
         <Box
+          flexBasis={{ xs: "100%", md: "48%" }}
           sx={{
-            flexBasis: "48%",
             filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))",
           }}
         >
