@@ -34,10 +34,10 @@ const Card = () => {
           <Typography
             variant="h2"
             sx={{
-              fontSize: "50px",
+              fontSize: { lg: "50px", md: "40px", xs: "35px" },
               letterSpacing: "-3%",
               fontWeight: 700,
-              lineHeight: "56px",
+              lineHeight: { lg: "56px", md: "40px", xs: "32px" },
               maxWidth: "580px",
               fontFamily: "Manrope",
             }}
@@ -46,6 +46,7 @@ const Card = () => {
           </Typography>
           <Typography
             variant="p"
+            component={"p"}
             sx={{
               fontSize: "18px",
               letterSpacing: "-2%",

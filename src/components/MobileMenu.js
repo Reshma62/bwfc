@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import {
   Box,
   Button,
@@ -33,7 +32,7 @@ const MobileMenu = () => {
     <Box>
       <Menu onClick={openMoblieMenu} sx={{ bgcolor: "red" }} />
       {openNav && (
-        <Box sx={{position: "absolute", right:0}}>
+        <Box sx={{ position: "absolute", right: 0 }}>
           <List sx={{ display: "block" }}>
             {navItem.map((item) => (
               <StyledListItem>
@@ -43,7 +42,7 @@ const MobileMenu = () => {
               </StyledListItem>
             ))}
           </List>
-          <Box sx={{display:"flex", flexDirection:"column"}}>
+          <Box sx={{ display: "flex", flexDirection: "column" }}>
             <Button
               variant="text"
               sx={{ color: "#3734A9", mr: "20px", textTransform: "capitalize" }}
@@ -66,5 +65,4 @@ const MobileMenu = () => {
     </Box>
   );
 };
-
-export default MobileMenu;
+export default MobileMenu

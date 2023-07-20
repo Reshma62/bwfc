@@ -62,9 +62,12 @@ const Chooseme = () => {
               }}
             >
               <ListItem
-
                 alignItems={{ xs: "center", md: "flex-start" }}
-                sx={{ gap: { xs: "20px", md: "20px" }, flexDirection:{xs: "column", md:"row"} }}
+                sx={{
+                  gap: { xs: "20px", md: "20px" },
+                  flexDirection: { xs: "column", sm: "row" },
+                  textAlign: { xs: "center", sm: "left" },
+                }}
               >
                 <ListItemAvatar>
                   <Avatar></Avatar>

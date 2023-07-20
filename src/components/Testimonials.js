@@ -28,7 +28,7 @@ const Testimonials = () => {
           fontSize: { xs: "32px", sm: "40px" },
           fontWeight: 800,
           letterSpacing: "-2px",
-          lineHeight: "48px",
+          lineHeight: { lg: "48px", md: "40px", xs: "35px" },
           fontFamily: "Manrope",
           maxWidth: "324px",
           mb: "40px",
@@ -63,6 +63,7 @@ const Testimonials = () => {
                     fontSize: { xs: "18px", sm: "20px" },
                     fontWeight: 800,
                     maxWidth: "300px",
+                    mx: { xs: "auto", md: "0" },
                     my: "16px",
                   }}
                 >
